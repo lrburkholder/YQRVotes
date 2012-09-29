@@ -5,12 +5,54 @@
     <title>YQRVotes Headquarters</title>
     <script type="text/javascript" charset="utf-8" src="js/cordova-1.9.0.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.1.1.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    <!--
+    //load_maps();
+    //initialize();
+    
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady()
+    {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position)
+    {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          +                                   position.timestamp          + '<br />';
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+                'message: ' + error.message + '\n');
+    }
+    -->
+    </script>
 </head>
 <body>
 
 <h1>YQRVotes</h1>
 
-<p><a href="MayorCandidates.html" title="2012 Mayor Candidates">Mayor Candidates</a></p>
+
+<p><a href="MayorCandidates.html" title="2012 Mayor Candidates">Mayor Candidates</a>
+&nbsp;&nbsp;<a href="CouncilCandidates.html" title="2012 Council Candidates">Council Candidates</a></p>
 
 <p>Municipal/School Board General Election Date: <strong>October 24, 2012</strong> from 9 a.m. to 8 p.m.</p>
 
@@ -20,5 +62,6 @@
 
 <p>The nearest polling location to your address is:</p>
 
+<div id="geolocation" name="geolocation"></div>
 </body>
 </html>
