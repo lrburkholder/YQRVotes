@@ -3,17 +3,112 @@
 <html>
 <head>
     <title>Regina Mayor Candidates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" charset="utf-8" src="js/cordova-1.9.0.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <link href="css/jquery.mobile-1.1.1.min.css" type="text/css" rel="stylesheet" />
-    <link href="css/jquery.mobile.theme-1.1.1.min.css" type="text/css" rel="stylesheet" />
-    <link href="css/jquery.mobile.structure-1.1.1.min.css" type="text/css" rel="stylesheet" />
+    <!--<link href="css/jquery.mobile.theme-1.1.1.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/jquery.mobile.structure-1.1.1.min.css" type="text/css" rel="stylesheet" />-->
 </head>
-<body>
+<body class="ui-mobile-viewport ui-overlay-c">
+    <div data-role="page">
+        <div data-role="header" class="ui-header ui-bar-a" data-theme="a" role="banner"> 
+            <a href="index.html" data-rel="back" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-up-a" >
+                <span class="ui-btn-inner ui-btn-corner-all">
+                    <span class="ui-btn-text">Back</span>
+                </span>
+            </a>
+	        <h2 class="ui-title">Mayor Candidates</h2> 
+        </div>
+        <div data-role="content" data-theme="d">
 
-<h1>Mayor Candidates</h1>
-
-
-
+            <!--<form class="ui-listview-filter ui-bar-c ui-listview-filter-inset" role="search">
+                <div class="ui-input-search ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-icon-searchfield ui-body-c">
+                    <input placeholder="Filter items..." data-type="search" class="ui-input-text ui-body-c">
+                        <a href="#" class="ui-input-clear ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-fullsize ui-btn-icon-notext ui-input-clear-hidden" title="clear text" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="delete" data-iconpos="notext" data-theme="c" data-mini="false">
+                            <span class="ui-btn-inner ui-btn-corner-all">
+                                <span class="ui-btn-text">clear text</span>
+                                <span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span>
+                            </span>
+                        </a>
+                </div>
+            </form>-->	
+            <ul data-role="listview" data-inset="true" data-filter="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+			<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-corner-top ui-btn-up-c">
+                <div class="ui-btn-inner ui-li ui-corner-top">
+                    <div class="ui-btn-text">
+                        <a href="#" class="ui-link-inherit">Tim Siekawitch</a>
+                    </div>
+                    <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                </div>
+			</li>
+			<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
+                <div class="ui-btn-inner ui-li">
+                    <div class="ui-btn-text">
+                        <a href="#" class="ui-link-inherit">Jim Elliott</a>
+                    </div>
+                    <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                </div>
+			</li>
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
+                <div class="ui-btn-inner ui-li">
+                    <div class="ui-btn-text">
+                        <a href="#" class="ui-link-inherit">Tom Brown</a>
+                    </div>
+                    <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                </div>
+			</li>
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
+                <div class="ui-btn-inner ui-li">
+                    <div class="ui-btn-text">
+                        <a href="#" class="ui-link-inherit">Marian Donnelly</a>
+                    </div>
+                    <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                </div>
+			</li>
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
+                <div class="ui-btn-inner ui-li">
+                    <div class="ui-btn-text">
+                        <a href="#" class="ui-link-inherit">Chad Novak</a>
+                    </div>
+                    <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                </div>
+			</li>
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
+                <div class="ui-btn-inner ui-li">
+                    <div class="ui-btn-text">
+                        <a href="#" class="ui-link-inherit">Meka Okochi</a>
+                    </div>
+                    <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                </div>
+			</li>
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
+                <div class="ui-btn-inner ui-li">
+                    <div class="ui-btn-text">
+                        <a href="#" class="ui-link-inherit">Michael Fougere</a>
+                    </div>
+                    <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                </div>
+			</li>
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
+                <div class="ui-btn-inner ui-li">
+                    <div class="ui-btn-text">
+                        <a href="#" class="ui-link-inherit">Charles Wiebe</a>
+                    </div>
+                    <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                </div>
+			</li>
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
+                <div class="ui-btn-inner ui-li">
+                    <div class="ui-btn-text">
+                        <a href="#" class="ui-link-inherit">Dr. Liz Brass</a>
+                    </div>
+                    <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                </div>
+			</li>
+		</ul>	
+	    </div><!-- /content -->
+    </div> <!-- /page -->
 </body>
 </html>
