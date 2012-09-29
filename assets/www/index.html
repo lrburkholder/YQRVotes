@@ -11,18 +11,14 @@
     //load_maps();
     //initialize();
     
-    document.addEventListener("deviceready", onPhoneDeviceReady, false);
+    window.addEventListener("deviceready", onPhoneDeviceReady, false);
     
     // Wait for Cordova to load
     //
     function onLoad()
     {
     	alert("onLoad");
-<<<<<<< HEAD
-    	window.addEventListener("deviceready", onDeviceReady, false);
-=======
-    	document.addEventListener("deviceready", onPhoneDeviceReady, false);
->>>>>>> Add plugins.xml and updated index.html
+    	window.addEventListener("deviceready", onPhoneDeviceReady, false);
     }
 
     // Cordova is ready
