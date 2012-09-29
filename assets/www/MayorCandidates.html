@@ -4,14 +4,35 @@
 <head>
     <title>Regina Mayor Candidates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" charset="utf-8" src="js/cordova-1.9.0.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.1.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cordova-2.1.0.js"></script>
     <link href="css/jquery.mobile-1.1.1.min.css" type="text/css" rel="stylesheet" />
-    <!--<link href="css/jquery.mobile.theme-1.1.1.min.css" type="text/css" rel="stylesheet" />
-    <link href="css/jquery.mobile.structure-1.1.1.min.css" type="text/css" rel="stylesheet" />-->
+    <link href="css/jquery.mobile.theme-1.1.1.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/jquery.mobile.structure-1.1.1.min.css" type="text/css" rel="stylesheet" />
+    
 </head>
 <body class="ui-mobile-viewport ui-overlay-c">
+    <style>
+        .candidateInfo 
+        {
+            display:none;
+            white-space:normal;
+        }
+
+        /*.candidateInfoDisplay
+        {
+            display: block;
+        }*/
+    </style>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $(".ui-btn-inner.ui-li").click(function () {
+                var currentElement = this;
+                $(currentElement).children('.candidateInfo').toggle();
+            });
+        });
+    </script>
     <div data-role="page">
         <div data-role="header" class="ui-header ui-bar-a" data-theme="a" role="banner"> 
             <a href="index.html" data-rel="back" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-up-a" >
@@ -22,18 +43,6 @@
 	        <h2 class="ui-title">Mayor Candidates</h2> 
         </div>
         <div data-role="content" data-theme="d">
-
-            <!--<form class="ui-listview-filter ui-bar-c ui-listview-filter-inset" role="search">
-                <div class="ui-input-search ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-icon-searchfield ui-body-c">
-                    <input placeholder="Filter items..." data-type="search" class="ui-input-text ui-body-c">
-                        <a href="#" class="ui-input-clear ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-fullsize ui-btn-icon-notext ui-input-clear-hidden" title="clear text" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="delete" data-iconpos="notext" data-theme="c" data-mini="false">
-                            <span class="ui-btn-inner ui-btn-corner-all">
-                                <span class="ui-btn-text">clear text</span>
-                                <span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span>
-                            </span>
-                        </a>
-                </div>
-            </form>-->	
             <ul data-role="listview" data-inset="true" data-filter="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
 			<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-corner-top ui-btn-up-c">
                 <div class="ui-btn-inner ui-li ui-corner-top">
@@ -41,6 +50,10 @@
                         <a href="#" class="ui-link-inherit">Tim Siekawitch</a>
                     </div>
                     <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                    <div class="candidateInfo">
+                        <div><img src="CandidateImages/tims-m.jpg" /></div>
+                        <div>I am looking forward to serving Regina residents as their Mayor. I keep myself busy by legally advocating pro bono for people who have no resources to retain a lawyer-at-bar. My hobbies include music production, reading and writing. Formerly a student of criminal justice this interest in the Rule of Law continues. I am bold and forward speaking when necessary though otherwise I am also a great listener, I easily relate to all people especially the underprivileged. I encourage self expression and the development of new aspects and equal opportunities in Regina.</div>
+                    </div>
                 </div>
 			</li>
 			<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
@@ -49,6 +62,12 @@
                         <a href="#" class="ui-link-inherit">Jim Elliott</a>
                     </div>
                     <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                    <div class="candidateInfo">
+                        <div><img src="CandidateImages/jimElliott.jpg" /></div>
+                        <div>Jim Elliott is committed to housing for all, families and neighbourhoods first, ecological and economic sustainability and an open government.  His highest priority is dealing directly with the housing crisis by implementing an eradication strategy for homelessness.  He stands for a strong transit and paratransit system, full public engagement in decisions and no one left behind. 
+Jim has extensive experience in the operations of the City providing advice and comment for years through most committees and the budgetary process.  Jim’s education is in the sciences and ecological systems.  Jim is comfortable talking to children and adults, in large or small groups.  Jim has worked with community associations, organizations and government agencies.
+Mr. Elliott will be a strong advocate for the taxpayers of this city, both internally and externally.  Jim will change the role of the Mayor by being in the community and being regularly available to talk and discuss issues.</div>
+                    </div>
                 </div>
 			</li>
             <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
@@ -57,6 +76,13 @@
                         <a href="#" class="ui-link-inherit">Tom Brown</a>
                     </div>
                     <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                    <div class="candidateInfo">
+                    <div><img src="CandidateImages/tom-brown.jpg" /></div>
+                        <div>I, Tom Brown, come from a background of various occupations and have been a strong influence in the community over the years by holding different positions with regards to Board of Directors and volunteering. Through this time, I have come to have a better understanding when it involves the people in our community as far as working with and for each other.
+                            In my working career, one of many ways I have supported the building of the community was with helping women to be a stronger influence in society through housing, daycare and education. After 40 years, it is still an important part of the city today.
+                            With my previous experiences over my lifetime, I am a great candidate for mayor and can bring many benefits to the position to help build out city to be a better community.
+                        </div>
+                    </div>
                 </div>
 			</li>
             <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
@@ -65,6 +91,7 @@
                         <a href="#" class="ui-link-inherit">Marian Donnelly</a>
                     </div>
                     <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                      
                 </div>
 			</li>
             <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
