@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN"
-"http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN"
+	"http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
 <html>
 <head>
     <title>YQRVotes Headquarters</title>
@@ -11,19 +11,27 @@
     //load_maps();
     //initialize();
     
+    document.addEventListener("deviceready", onPhoneDeviceReady, false);
+    
     // Wait for Cordova to load
     //
     function onLoad()
     {
     	alert("onLoad");
+<<<<<<< HEAD
     	window.addEventListener("deviceready", onDeviceReady, false);
+=======
+    	document.addEventListener("deviceready", onPhoneDeviceReady, false);
+>>>>>>> Add plugins.xml and updated index.html
     }
 
     // Cordova is ready
     //
-    function onDeviceReady()
+    function onPhoneDeviceReady()
     {
     	alert("onDeviceReady");
+    	// Throw an error if no update is received every 30 seconds
+    	var options = { timeout: 30000 };
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
 
