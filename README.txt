@@ -1,0 +1,1 @@
+Application to aid in gathering information about the candidates in the 2012 local election for Regina, Saskatchewan, Canada.
