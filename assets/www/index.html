@@ -32,7 +32,7 @@
 
     // onSuccess Geolocation
     //
-    function onSuccess(position)
+    var onSuccess = function onSuccess(position)
     {
     	alert("onSuccess");
     	document.write(position.coords);
@@ -45,7 +45,7 @@
                             'Heading: '            + position.coords.heading               + '<br />' +
                             'Speed: '              + position.coords.speed                 + '<br />' +
                             'Timestamp: '          +                                   position.timestamp          + '<br />';
-    }
+    };
 
     // onError Callback receives a PositionError object
     //
@@ -64,7 +64,7 @@
 
 <p><a href="MayorCandidates.html" title="2012 Mayor Candidates">Mayor Candidates</a>
 &nbsp;&nbsp;<a href="CouncilCandidates.html" title="2012 Council Candidates">Council Candidates</a></p>
-
+<a href="newindex.html">NewIndex</a>
 <p>Municipal/School Board General Election Date: <strong>October 24, 2012</strong> from 9 a.m. to 8 p.m.</p>
 
 <p>For more information contact the Elections Office during business hours Monday to Friday from 8 a.m. to 5 p.m. at 751-4479.</p>
