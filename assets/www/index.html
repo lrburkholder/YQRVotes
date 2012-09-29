@@ -10,9 +10,6 @@
     <script type="text/javascript" charset="utf-8" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" charset="utf-8">
     <!--
-    //load_maps();
-    //initialize();
-    
     // Since the Cordova getCurrentLocation routine is not working properly and Adobe has not responded yet.
     // Build the URL to query
     //var url = "http://iplocationtools.com/ip_query.php?output=json&callback=?&ip=";
@@ -20,11 +17,15 @@
     // Utilize the JSONP API
     $.getJSON(url, function(data)
    	{
-    	if(data['status'] == 'ok')
+    	if(data['geoplugin_status'] == 200)
     	{
     		// Do something with the data
-    		$('#profile #ip').append(data['IP']);
-    		$('#profile #country').append(data['CountryName']);
+    		//$('#profile #ip').append(data['IP']);
+    		//$('#profile #country').append(data['CountryName']);
+    		var geoelement = document.getElementById('geolocationelement');
+    		geoelement.innerHTML = "Lat:  " + data['geoplugin_latitude'] + "<br />"
+    			+ "Long:  " + data['geoplugin_longitude'];
+    		//document.write("Lat: " + data['geoplugin_latitude'])
     	}
     });
     
@@ -54,16 +55,15 @@
     {
     	// Not noted to run on Android, waiting for response from Adobe team
     	//alert("onSuccess");
-    	document.write(position.coords);
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-                            'Longitude: '          + position.coords.longitude             + '<br />' +
-                            'Altitude: '           + position.coords.altitude              + '<br />' +
-                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                            'Heading: '            + position.coords.heading               + '<br />' +
-                            'Speed: '              + position.coords.speed                 + '<br />' +
-                            'Timestamp: '          +                                   position.timestamp          + '<br />';
+        //var element = document.getElementById('geolocation');
+        //element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+        //                    'Longitude: '          + position.coords.longitude             + '<br />' +
+        //                    'Altitude: '           + position.coords.altitude              + '<br />' +
+        //                    'Accuracy: '           + position.coords.accuracy              + '<br />' +
+        //                    'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+        //                    'Heading: '            + position.coords.heading               + '<br />' +
+        //                    'Speed: '              + position.coords.speed                 + '<br />' +
+        //                    'Timestamp: '          +                                   position.timestamp          + '<br />';
     };
 
     // onError Callback receives a PositionError object
@@ -83,7 +83,7 @@
 
 <p><a href="MayorCandidates.html" title="2012 Mayor Candidates">Mayor Candidates</a>
 &nbsp;&nbsp;<a href="CouncilCandidates.html" title="2012 Council Candidates">Council Candidates</a></p>
-<a href="newindex.html">NewIndex</a>
+
 <p>Municipal/School Board General Election Date: <strong>October 24, 2012</strong> from 9 a.m. to 8 p.m.</p>
 
 <p>For more information contact the Elections Office during business hours Monday to Friday from 8 a.m. to 5 p.m. at 751-4479.</p>
@@ -92,6 +92,6 @@
 
 <p>The nearest polling location to your address is:</p>
 
-<div id="geolocation" name="geolocation"></div>
+<div id="geolocationelement" name="geolocationelement"></div>
 </body>
 </html>
