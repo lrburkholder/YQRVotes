@@ -4,6 +4,7 @@
 <head>
 	<meta charset="windows-1252">
     <title>YQRVotes Headquarters</title>
+    <script type="text/javascript" charset="utf-8" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cordova-2.1.0.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.1.1.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="https://www.google.com/jsapi"></script>
@@ -12,11 +13,27 @@
     //load_maps();
     //initialize();
     
+    // Since the Cordova getCurrentLocation routine is not working properly and Adobe has not responded yet.
+    // Build the URL to query
+    //var url = "http://iplocationtools.com/ip_query.php?output=json&callback=?&ip=";
+    var url = "http://www.geoplugin.net/json.gp?jsoncallback=?";
+    // Utilize the JSONP API
+    $.getJSON(url, function(data)
+   	{
+    	if(data['status'] == 'ok')
+    	{
+    		// Do something with the data
+    		$('#profile #ip').append(data['IP']);
+    		$('#profile #country').append(data['CountryName']);
+    	}
+    });
+    
     // Wait for Cordova to load
     //
     function onLoad()
     {
-    	alert("onLoad");
+    	// Runs correctly on Android
+    	//alert("onLoad");
     	document.addEventListener("deviceready", onDeviceReady, false);
     }
 
@@ -24,7 +41,8 @@
     //
     function onDeviceReady()
     {
-    	alert("onDeviceReady");
+    	// Runs correctly on Android
+    	//alert("onDeviceReady");
     	// Throw an error if no update is received every 30 seconds
     	var options = { timeout: 30000 };
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -34,7 +52,8 @@
     //
     var onSuccess = function onSuccess(position)
     {
-    	alert("onSuccess");
+    	// Not noted to run on Android, waiting for response from Adobe team
+    	//alert("onSuccess");
     	document.write(position.coords);
         var element = document.getElementById('geolocation');
         element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
