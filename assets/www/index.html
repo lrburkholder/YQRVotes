@@ -25,7 +25,6 @@
     		var geoelement = document.getElementById('geolocationelement');
     		geoelement.innerHTML = "Lat:  " + data['geoplugin_latitude'] + "<br />"
     			+ "Long:  " + data['geoplugin_longitude'];
-    		//document.write("Lat: " + data['geoplugin_latitude'])
     	}
     });
     
@@ -92,6 +91,16 @@
 
 <p>The nearest polling location to your address is:</p>
 
+<p><i>Note:</i> Currently only detects the latitude and longitude coordinates for Personal Computers (PCs) and could not find for the Android phone device tested.</p>
+
 <div id="geolocationelement" name="geolocationelement"></div>
+
+<br />
+
+<hr />
+
+<i>YQRVotes Application.  All data referenced belongs to the their respective owners.</i>
+
 </body>
+
 </html>
